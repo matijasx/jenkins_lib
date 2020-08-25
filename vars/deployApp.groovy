@@ -4,7 +4,7 @@ def call(String provisioner = 'docker', serviceName = '', externalPort = '80',  
 	echo "Deploying"
 	if (provisioner == 'docker' && serviceName && image){
 
-		sh "docker run -d --name ${serviceName} --port ${port} ${image}"
+		sh "docker run -d --name ${serviceName} --port ${externalPort}:${internalPort} ${image}"
 	}
 	
 }
