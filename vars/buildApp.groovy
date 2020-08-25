@@ -4,7 +4,7 @@ def call(String buildUsing = 'docker', image = ''){
 	echo "Building using ${buildUsing} and image ${image}"
 	if (buildUsing == 'docker' && image) {
 		echo "Building using ${buildUsing} and image ${image}"
-		sh 'docker build . -t '
+		sh 'docker build . -t apache_app'
 	} else {
 		error "buildApp method missing one or more arguments"
 	}
