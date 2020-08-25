@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 def call(String buildUsing = 'docker'){
-	echo 'Building using ${buildUsing} and image '// ${image}'
+	echo "Building using ${buildUsing} and image "// ${image}'
 	/*if (buildUsing == 'docker' {
 		sh 'Building using ${buildUsing} and image ${image}'
 	} else {
